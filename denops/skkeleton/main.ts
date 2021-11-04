@@ -255,6 +255,7 @@ export async function main(denops: Denops) {
       return Promise.resolve(currentContext.get().toString().length);
     },
     getPrefix(): Promise<string> {
+      console.log("getPrefix()");
       const state = currentContext.get().state;
       if (state.type !== "input") {
         return Promise.resolve("");
@@ -262,6 +263,7 @@ export async function main(denops: Denops) {
       return Promise.resolve(state.henkanFeed);
     },
     getCandidates(): Promise<[string, string[]][]> {
+      console.log("getCandidates()");
       const state = currentContext.get().state;
       if (state.type !== "input") {
         return Promise.resolve([]);

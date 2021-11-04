@@ -16,6 +16,7 @@ export class Source
   async getCompletePosition(
     args: GetCompletePositionArguments<Record<string, never>>,
   ): Promise<number> {
+    console.log("getCompletePosition");
     const inputLength = args.context.input.length;
     const preEditLength =
       (await args.denops.dispatch("skkeleton", "getPreEditLength")) as number;
@@ -25,6 +26,7 @@ export class Source
   async gatherCandidates(
     args: GatherCandidatesArguments<Record<string, never>>,
   ): Promise<Candidate<CompletionMetadata>[]> {
+    console.log("gatherCandidates");
     const candidates =
       (await args.denops.dispatch("skkeleton", "getCandidates")) as [
         string,
