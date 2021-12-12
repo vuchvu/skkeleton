@@ -286,3 +286,5 @@ function! skkeleton#getchar(msg) abort
   call input(a:msg)
   return s:char
 endfunction
+
+let g:skkeleton#mapped_keys = get(g:, 'skkeleton#mapped_keys', skkeleton#get_default_mapped_keys())
