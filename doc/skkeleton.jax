@@ -129,7 +129,7 @@ acceptIllegalResult                     *skkeleton-config-acceptIllegalResult*
 
 
 debug                                                 *skkeleton-config-debug*
-        (デフォルト v:false, g:skkeleton#debug が真の場合は v:true)
+        (デフォルト v:false, |g:skkeleton#debug| が真の場合は v:true)
         このオプションを有効にするとデバッグログが出力されるようになります。
 
 eggLikeNewline                               *skkeleton-config-eggLikeNewline*
@@ -226,6 +226,12 @@ skkServerResEnc                 *skkeleton-config-skkServerResEnc*
 skkServerReqEnc                 *skkeleton-config-skkServerReqEnc*
         （デフォルト "euc-jp"）
         辞書サーバーに渡す文字列のエンコード形式を指定します。
+
+------------------------------------------------------------------------------
+VARIABLE                                                  *skkeleton-variable*
+
+g:skkeleton#mapped_keys                              *g:skkeleton#mapped_keys*
+
 ------------------------------------------------------------------------------
                                               *skkeleton#register_kanatable()*
 skkeleton#register_kanatable({tableName}, {table}, {create})
